@@ -1,0 +1,147 @@
+#body-inicio-sesion {
+    background-color: #191919;
+    height: 100vh;
+    padding: 1px;
+    height: 100vh;
+}
+
+#inicio-sesion-contenedor {
+    background-color: #21211e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max(300px, 40vw);
+    height: auto;
+    border-radius: 20px;
+    margin: 5rem auto 2rem;
+}
+
+.logo {
+    display: block;
+    margin: 20px auto 0;
+    max-width: 100px;
+    width: 40%;
+    height: 40%;
+}
+
+#inicio-sesion-contenedor header h1 {
+    color: rgb(236, 236, 236);
+    margin-top: 0.1em;
+}
+
+#datos-usuario-contenedor {
+    width: 100%;
+}
+
+#datos-usuario-contenedor form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+label.set-block {
+    font-size: 1.3rem;
+    display: block;
+    color: rgb(236, 236, 236);
+    width: 100%;
+    margin-bottom: 0.2em;
+    font-weight: bold;
+}
+
+input.set-block {
+    display: block;
+    width: 100%;
+    height: 1.5em;
+    padding: 0.5em;
+    margin-bottom: 2em;
+    border-radius: 10px;
+    background-color: rgb(236, 236, 236);
+    font-size: 1.2rem;
+}
+
+#login-btn {
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+    padding: 0.5rem 1rem;
+    width: auto;
+    margin: 0 auto 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #128ca0;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+#login-btn:hover {
+    transform: scale(1.1);
+    background-color: #ed3124;
+    
+}
+
+#barra-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    height: 40px;
+    background-color: #191919;
+    width: 100%;
+    padding: 0px 1em;
+}
+
+#barra-menu ul{
+    list-style: none;
+    padding: 0;
+}
+
+.barra-menu-option {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 0.5em 1em;
+    background-color: #28282B;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.barra-menu-option {
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+}
+
+.barra-menu-option:not(.activo):hover {
+    background-color: #ed3124;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.barra-menu-option.activo {
+    background-color: #ed3124;
+}
+
+.F-boton {
+    color: #737e6e;
+    font-weight: bold;
+}
+
+.icono-encabezado {
+    vertical-align: top;
+    transform: translateY(2px);
+    width: 0.8rem;
+    filter: invert();
+}
+
+#tabla-productos {
+    width: 100%;
+}
+
+#tabla-productos tr th {
+    padding: 0 0.5em;
+    box-sizing: border-box;
+    background-color: #28282B;
+    color: white;
+    text-align: left;
+}
