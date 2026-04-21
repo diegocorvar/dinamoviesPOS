@@ -1,147 +1,302 @@
-#body-inicio-sesion {
-    background-color: #191919;
-    height: 100vh;
-    padding: 1px;
-    height: 100vh;
+/* =========================
+    BASE
+========================= */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: white;
+    min-height: 100vh;
 }
 
-#inicio-sesion-contenedor {
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* =========================
+    GENERALES
+========================= */
+
+.negrita {
+    font-weight: bold;
+}
+
+
+/* =========================
+    LOGIN
+========================= */
+
+.login {
     background-color: #21211e;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: max(300px, 40vw);
-    height: auto;
     border-radius: 20px;
     margin: 5rem auto 2rem;
 }
 
-.logo {
+.login__logo {
     display: block;
     margin: 20px auto 0;
     max-width: 100px;
     width: 40%;
-    height: 40%;
 }
 
-#inicio-sesion-contenedor header h1 {
-    color: rgb(236, 236, 236);
+.login__title {
+    color: #ececec;
     margin-top: 0.1em;
 }
 
-#datos-usuario-contenedor {
-    width: 100%;
-}
-
-#datos-usuario-contenedor form {
+.login__form {
     width: 60%;
     margin: 0 auto;
 }
 
-label.set-block {
+.login__label {
     font-size: 1.3rem;
     display: block;
-    color: rgb(236, 236, 236);
-    width: 100%;
+    color: #ececec;
     margin-bottom: 0.2em;
     font-weight: bold;
 }
 
-input.set-block {
-    display: block;
+.login__input {
     width: 100%;
-    height: 1.5em;
     padding: 0.5em;
     margin-bottom: 2em;
     border-radius: 10px;
-    background-color: rgb(236, 236, 236);
+    background-color: #ececec;
     font-size: 1.2rem;
 }
 
-#login-btn {
-    text-align: center;
-    text-transform: uppercase;
+.login__button {
     display: block;
-    padding: 0.5rem 1rem;
-    width: auto;
     margin: 0 auto 20px;
+    padding: 0.5rem 1rem;
     border-radius: 5px;
     font-weight: bold;
+    text-transform: uppercase;
     background-color: #128ca0;
     color: white;
-    cursor: pointer;
     border: none;
-    transition: all 0.2s ease;
+    cursor: pointer;
+    transition: 0.2s ease;
 }
 
-#login-btn:hover {
+.login__button:hover {
     transform: scale(1.1);
     background-color: #ed3124;
-    
 }
 
-#barra-menu {
+/* =========================
+    MENU
+========================= */
+
+.menu {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-color: #191919;
+    padding: 2px 1em;
+}
+
+.menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;
-    height: 40px;
-    background-color: #191919;
-    width: 100%;
-    padding: 0px 1em;
-}
+    gap: 1rem;
 
-#barra-menu ul{
-    list-style: none;
-    padding: 0;
-}
-
-.barra-menu-option {
-    display: flex;
-    justify-content: space-between;
-    color: white;
     padding: 0.5em 1em;
     background-color: #28282B;
-    width: 100%;
-    font-size: 1rem;
+    color: white;
+
+    border-radius: 6px;
+    transition: 0.2s ease;
 }
 
-.barra-menu-option {
-    display: flex;
-    margin: 0;
-    justify-content: space-between;
-}
-
-.barra-menu-option:not(.activo):hover {
+.menu__item:hover {
     background-color: #ed3124;
     transform: scale(1.05);
     cursor: pointer;
 }
 
-.barra-menu-option.activo {
-    background-color: #ed3124;
+.menu__text {
+    font-weight: 500;
 }
 
-.F-boton {
+.menu__shortcut {
     color: #737e6e;
     font-weight: bold;
 }
 
-.icono-encabezado {
-    vertical-align: top;
-    transform: translateY(2px);
+
+/* =========================
+    TABLE
+========================= */
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table__head .table__cell {
+    background-color: #28282B;
+    color: white;
+}
+
+/* Celdas */
+.table__cell {
+    padding: 0 0.5em;
+    border: 1px solid #191919;
+    text-align: left;
+}
+
+/* Bordes de encabezado */
+.table__row--header .table__cell {
+    border-right: 1px solid white;
+}
+
+.table__row--header .table__cell:first-child {
+    border-left: none;
+}
+
+.table__row--header .table__cell:last-child {
+    border-right: none;
+}
+
+/* Quitar bordes exteriores */
+.table__cell:first-child {
+    border-left: none;
+}
+
+.table__cell:last-child {
+    border-right: none;
+}
+
+/* Iconos */
+.table__icon {
     width: 0.8rem;
+    transform: translateY(2px);
     filter: invert();
 }
 
-#tabla-productos {
-    width: 100%;
+#encabezado_codigo {
+    width: 10%;
 }
 
-#tabla-productos tr th {
-    padding: 0 0.5em;
+#encabezado_pelicula {
+    width: 30%;
+}
+
+#encabezado_anio {
+    width: 4%;
+}
+
+#encabezado_clasificacion {
+    width: 16%;
+}
+
+#encabezado_imdb {
+    width: 5%;
+}
+
+#encabezado_precio {
+    width: 10%;
+}
+
+#encabezado_cantidad {
+    width: 8%;
+}
+
+#encabezado_total {
+    width: 10%;
+}
+
+/* =========================
+    FOOTER
+========================= */
+
+.footer__venta {
+    height: 100%;
+    background-color: #191919;
+    padding: 0px;
+}
+
+.venta__total {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    align-items: center;
+}
+
+#monto-total {
     box-sizing: border-box;
-    background-color: #28282B;
+    padding: 0 1em;
+    font-size: 3rem;
+    margin: 0;
     color: white;
-    text-align: left;
+}
+
+.btn-accion-venta {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    padding: 0.5em 2em;
+    margin-left: 2em;
+    
+    font-size: 1.2rem;
+    
+    background-color: #191919;
+    color: white;
+    border: 0.5px solid;
+
+    cursor: pointer;
+}
+
+#ejecutar-venta-btn {
+    border-color: #009472;
+    color: #00bf92;
+}
+
+#ejecutar-venta-btn:hover {
+    background-color: #009472;
+    color: white;
+}
+
+#cancelar-venta-btn {
+    border-color: #dc143c;
+    color: #ee234c;
+}
+
+#cancelar-venta-btn:hover {
+    background-color: #dc143c;
+    color: white;
+}
+
+#monto-total {
+    color: white;
+}
+
+.verde {
+    color: #00bf92;
+}
+
+#moneda {
+    color: #737e6e;
+    font-size: 1.5rem;
+    vertical-align: middle;
 }

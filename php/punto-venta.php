@@ -9,7 +9,15 @@
     <link rel="shorcut icon" href="../recursos/imagenes/logo.png"/>
 </head>
 <body>
-    <?php include  './navbar.php'?>
-    <?php include  './venta.php'?>
+    <header>
+        <?php include  './navbar.php'?>
+    </header>
+    <main>
+        <?php include  './venta.php'?>
+    </main>
+    <footer>
+        <?php include  './pie-venta.php'?>
+    </footer>
+    
 </body>
 </html>

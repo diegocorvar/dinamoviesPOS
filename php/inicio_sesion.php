@@ -6,7 +6,7 @@
     <title>Inicio de sesión</title>
     <link rel="stylesheet" href="../css/normalize.css"/>
     <link rel="stylesheet" href="../css/estilos.css"/>
-    <link rel="shorcut icon" href="../recursos/imagenes/logo.png"/>
+    <link rel="shorcut icon" href="../recursos/imagenes/logo.png"/>|
 </head>
 <body id="body-inicio-sesion">
     <main id="inicio-sesion-contenedor">
