@@ -1,4 +1,10 @@
 <main class="sales">
+    <div class="contenedor-barra-busqueda">
+        <form action="POST">
+            <input id="barra__buscador" type="text">
+            <button id="btn-buscar"><img src="../recursos/imagenes/buscar.png" alt=""></button>
+        </form>
+    </div>
     <table class="table">
         <thead class="table__head">
             <tr class="table__row table__row--header">
