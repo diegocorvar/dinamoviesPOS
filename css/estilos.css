@@ -1,0 +1,907 @@
+/* ========================
+    Fuentes de letra
+=========================== */
+
+@font-face {
+    font-family: 'Karmatic_Arcade';
+    src: url('../recursos/fuentes_de_letra/ka1.ttf');
+}
+
+@font-face {
+    font-family: 'Press_Start_2P';
+    src: url('../recursos/fuentes_de_letra/PressStart2P.ttf');
+}
+
+@font-face {
+    font-family: 'VCR_OSD_Mono';
+    src: url('../recursos/fuentes_de_letra/VCR_OSD_MONO_1.001.ttf');
+}
+
+@font-face {
+    font-family: 'VarsityTeam-Bold';
+    src: url('../recursos/fuentes_de_letra/VarsityTeam-Bold.otf');
+}
+
+@font-face {
+    font-family: 'code128';
+    src: url('../recursos/fuentes_de_letra/code128.ttf');
+}
+
+@font-face {
+    font-family: 'BarcodeFont';
+    src: url('../recursos/fuentes_de_letra/BarcodeFont.ttf');
+}
+
+@font-face {
+    font-family: 'determination';
+    src: url('../recursos/fuentes_de_letra/determination.ttf');
+}
+
+@font-face {
+    font-family: 'atwriter';
+    src: url('../recursos/fuentes_de_letra/atwriter.ttf');
+}
+
+@font-face {
+    font-family: 'ciacode39_m';
+    src: url('../recursos/fuentes_de_letra/ciacode39_m.ttf');
+}
+
+/* ========================
+    Selectores de etiqueta
+=========================== */
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 6%;
+}
+
+main:not(.login_background) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========================
+    Inicio de sesión
+=========================== */
+
+main.login_background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color:  #191919;
+    min-height: 100vh;
+}
+
+.contenedor_login_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    height: auto;
+    background-color: #292828;
+}
+
+.contenedor_login_form h1 {
+    font-family: 'VarsityTeam-Bold';
+    text-transform: uppercase;
+    color: rgb(231, 231, 231);
+    text-align: center;
+}
+
+.login_logo {
+    display: block;
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+.form_login label,
+.form_login input {
+    display: block;
+    font-family: 'VCR_OSD_Mono';
+}
+
+.form_login {
+    width: 60%;
+}
+
+.form_login label {
+    font-size: 1rem;
+    margin-bottom: 0.2em;
+    color: rgb(196, 196, 196);
+}
+
+.form_login input {
+    background-color: rgb(220, 220, 220);;
+    box-sizing: border-box;
+    
+    font-size: 1rem;
+    padding: 0.5em;
+
+    margin-bottom: 0.5em;
+    width: 100%;
+}
+
+#btn_iniciar_sesion {
+    display: block;
+    background-color: #191919;
+    color: rgb(220, 220, 220);
+    cursor: pointer;
+
+    margin: 1.5rem auto 0;
+    padding: 0.5em;
+    border: none;
+
+    font-family: 'VCR_OSD_Mono';
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
+
+    transition: all 0.1s ease;
+}
+
+#btn_iniciar_sesion:hover {
+    background-color: #be0202;
+    box-shadow: 0 2px 5px rgb(68, 0, 0);
+}
+
+/* ========================
+    Menú superior
+=========================== */
+
+/* ------- BOTONES -------- */
+
+#menu_superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #191919;
+    height: 100%;
+}
+
+#menu_superior > div:first-child {
+    display: flex;
+    justify-content: space-around;
+    gap: 0;
+    width: 50%;
+    height: 100%;
+}
+
+#menu_superior > div:last-child {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    align-self: center;
+    height: 100%;
+    width: 50%;
+}
+
+.opcion_menu {
+    cursor: pointer;
+    height: 100%;
+    width: auto;
+    align-self: stretch;
+
+    background-color: transparent;
+    padding: 0 2em;
+
+    font-family: 'Press_Start_2P';
+    font-size: 0.8rem;
+    color: white;
+    
+    border: none;
+}
+
+.opcion_menu:hover {
+    background-color: #be0202;
+}
+
+/* ------- SESIÓN -------- */
+
+.usuario_logueado {
+    display: flex;
+    align-self: center;
+    width: auto;
+    align-items: center;
+    height: 80%;
+}
+
+.usuario_logueado div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* Icono de usuario */
+.usuario_logueado > div:first-child {
+    border: 1px solid white;
+    padding: 0 10%;
+
+    background-color: #f39f06;
+}
+
+/* Nombre de usuario */
+.usuario_logueado > div:last-child {
+    border: 1px solid white;
+    padding: 0 10%;
+    max-width: 300px;
+    width: 200px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    
+    font-family: 'VCR_OSD_Mono';
+    color: white;
+}
+
+.icono_usuario {
+    height: 50%;
+    filter: invert();
+}
+
+.icono_cerrar_sesion {
+    filter: invert();
+    align-self: center;
+    height: 50%;
+}
+
+.form_cerrar_sesion {
+    height: 100%;
+    display: flex;
+}
+
+#btn_cerrar_sesion {
+    margin-right: 2px;
+    align-self: center;
+    
+    height: 80%;
+    width: 70px;
+    
+    background-color: rgb(243, 0, 0);
+    border-radius: 1px;
+}
+
+#btn_cerrar_sesion:hover {
+    background-color: rgb(212, 0, 0);
+}
+
+/* ==================================
+    Vistas
+===================================== */
+
+
+.vista_actual {
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+}
+
+
+/* ==================================
+    Barra de búsqueda de productos
+===================================== */
+
+.vista_venta {
+    height: 100%;
+}
+
+.contenedor_busqueda_producto {
+    height: 5vh;
+    flex-shrink: 0;
+}
+
+.contenedor_busqueda_producto form{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.icono_busqueda {
+    height: 15px;
+    filter: invert();
+}
+
+.btn_busqueda_producto {
+    box-sizing: border-box;
+    display: flex;
+    cursor: pointer;
+    
+    justify-content: center;
+    align-items: center;
+
+    width: 37px;
+    border: 2px solid #191919;
+    background-color: #191919;
+}
+
+.btn_busqueda_producto:hover {
+    background-color: rgb(29, 29, 134);
+}
+
+#input_id_producto {
+    width: 100%;
+    box-sizing: border-box;
+
+    font-size: 1.5rem;
+    font-family: 'determination';
+    padding-left: 0.4em;
+
+    border: 2px solid #191919;
+}
+
+#input_id_producto:focus {
+    outline: none;
+}
+
+.contenedor_resultados_busqueda {
+    position: relative;
+    width: 100%;
+    max-height: 20vw;
+    overflow-y: auto;
+    box-sizing: border-box;
+
+    background-color: white;
+    border-bottom: 1px solid #191919;
+}
+
+.contenedor_resultados_busqueda ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resultado_busqueda {
+    cursor: pointer;
+    padding: 0.5em 1em;
+
+    font-family: 'determination';
+    border-bottom: 2px solid #ebebeb;
+}
+
+.resultado_busqueda:hover {
+    background-color: rgb(218, 218, 218);
+}
+
+/* ==================================
+    Carrito de compras
+===================================== */
+
+.carrito_compras {
+    display: flex;
+    flex: 1;
+    height: 94%;
+    background-color: rebeccapurple;    
+}
+
+.contenedor_tabla_carrito_compras {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #2e2e2e;
+}
+
+.tabla_carrito_compras {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+.tabla_carrito_compras th,
+.tabla_carrito_compras td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.encabezado_tabla_venta {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'VCR_OSD_Mono';
+    background-color: #191919;
+
+    border-bottom: 1px solid rgb(116, 116, 116);
+    border-left: 1px solid rgb(116, 116, 116);
+    border-right: 1px solid rgb(116, 116, 116);
+}
+
+.fila_tabla_venta {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-family: 'atwriter';
+    font-weight: 100;
+    letter-spacing: 0.2em;
+
+    padding: 0.5em 0;
+    background-color: rgb(62, 62, 62);
+
+    border-bottom: 1px solid rgb(116, 116, 116);
+    border-left: 1px solid rgb(116, 116, 116);
+    border-right: 1px solid rgb(116, 116, 116);
+}
+
+.seleccionada td {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.columna_codigo:not(.encabezado_tabla_venta) {
+    font-family: 'ciacode39_m';
+    font-size: 0.8rem;
+}
+
+.columna_codigo {
+    width: 20%;
+    border-left: none;
+}
+
+.columna_titulo {
+    width: 50%;
+}
+
+.columna_cantidad,
+.columna_precio,
+.columna_total {
+    width: 10%;
+}
+
+.columna_total {
+    border-right: none;
+}
+
+/* ===== CONTENEDOR PARA INDICAR CANTIDAD DE PELICULAS =====*/
+
+.contenedor_flotante {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    width: 90%;
+    height: auto;
+
+    background-color: #191919;
+    border: 5px solid white;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.contenedor_cantidad_peliculas {
+    max-width: 400px;
+    max-height: 250px;
+}
+
+.contenedor_cantidad_peliculas form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contenedor_cantidad_peliculas p{
+    font-size: 2rem;
+    font-family: 'VCR_OSD_Mono';
+    text-transform: uppercase;
+    color: white;
+}
+
+.contenedor_cantidad_peliculas input{
+    font-size: 2rem;
+    font-family: 'VCR_OSD_Mono';
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.contenedor_cantidad_peliculas button{
+    cursor: pointer;
+    box-shadow: 0 5px 5px black;
+    font-size: 2rem;
+    font-family: 'VCR_OSD_Mono';
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    color: white;
+    background-color: #040303;
+}
+
+.contenedor_cantidad_peliculas button:hover{
+    background-color: rgb(1, 200, 1);
+}
+
+.contenedor_cantidad_peliculas input,
+.contenedor_cantidad_peliculas button {
+    width: 60%;
+    max-width: 200px;
+}
+
+/* ==== DETALLES DE PELÍCULA ==== */
+
+.contenedor_detalles_pelicula_carrito {
+    position: relative;
+    background: url('/recursos/fondos/alfombra_azul.jpg');
+    flex: 0.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalle_contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.fila_detalles {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.caratula_pelicula {
+    width: 60%;
+    max-width: 300px;
+    box-shadow: 0 5px 5px rgb(12, 12, 12);
+}
+
+.detalle_pelicula {
+    border: 3px solid white;
+    color: white;
+    font-weight: bold;
+    font-family: 'VCR_OSD_Mono';
+    padding: 0.2rem 0.5rem;
+    min-width: 80px;
+    text-align: center;
+    background-color: #000000;
+}
+
+.titulo_detalle {
+    border-bottom: 3px solid white;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.informacion_detalle {
+    font-weight: 100;
+}
+
+.imdb {
+    color: rgb(233, 163, 2);
+}
+
+.clasificacion {
+    color: #d34d00;
+}
+
+.genero {
+    color: green;
+}
+
+.btn_eliminar_pelicula_carrito img{
+    width: 100%;
+    filter: invert();
+}
+
+.btn_eliminar_pelicula_carrito {
+    position: absolute;
+    left: 1%;
+    bottom: 1%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    cursor: pointer;
+    background-color: #be0202;
+
+    width: 10%;
+    max-width: 50px;
+    height: 10%;
+    max-height: 50px;
+}
+
+.btn_eliminar_pelicula_carrito:hover {
+    background-color: #ff0000;
+}
+
+/* ==================================
+    Footer resumen carrito
+===================================== */
+
+footer.footer_resumen_carrito {
+    display: flex;
+    align-items: center;
+
+    height: 14%;
+    background-color: #191919;
+}
+
+.resumen_carrito {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.contenedor_derecho {
+    justify-content: space-between;
+}
+
+.btn_seleccion_cliente {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    height: 50%;
+    min-width: 40px;
+    width: 45%;
+    max-width: 40px;
+
+    border: none;
+    box-shadow: 0 3px rgb(71, 71, 71);
+}
+
+.btn_seleccion_cliente:hover {
+    background-color: #f39f06;
+    box-shadow: 0 3px #915f04;
+}
+
+.btn_seleccion_cliente:active {
+    background-color: #f39f06;
+    box-shadow: 0 -3px #915f04;
+}
+
+.btn_seleccion_cliente img{
+    max-width: 80%;
+}
+
+.contenedor_seleccion_cliente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    height: 80%;
+    width: auto;
+
+    padding: 0 1em;
+    margin-left: 5%;
+}
+
+.nombre_cliente {
+    font-family: 'VCR_OSD_Mono';
+    font-weight: lighter;
+    color: white;
+}
+
+.contenedor_total_venta {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 90%;
+
+
+    background-color: #222222;
+    padding: 0.2em 1em;
+    border: 3px solid rgb(0, 0, 0);
+
+    font-family: 'VCR_OSD_Mono';
+    font-size: 3rem;
+    color: rgb(1, 254, 1);
+}
+
+.btn_accion_compra  {
+    cursor: pointer;
+    border: none;
+    padding: 1em 2em;
+    font-family: 'VCR_OSD_Mono';
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    box-shadow: 0 5px black, -2px 0 black, -2px 5px black;
+    color: white;
+}
+
+.btn_accion_compra:active {
+    box-shadow: 0 -5px black, 5px 0 black, 5px -5px black;
+}
+
+.vender {
+    background-color: rgb(0, 61, 0);
+}
+
+.vender:hover {
+    background-color: rgb(0, 152, 0);
+}
+
+.cancelar {
+    background-color: rgb(84, 1, 1);
+}
+
+.cancelar:hover {
+    background-color: rgb(190, 0, 0);
+}
+
+/* =========================================
+    Contenedor para efectuar pago de carrito
+============================================ */
+
+.contenedor_realizar_venta {
+    display: none;
+
+    max-width: 400px;
+    max-height: 500px;
+}
+
+.encabezado_resumen_pago {
+    font-size: 2rem;
+    font-family: 'VCR_OSD_Mono';
+    
+    text-transform: uppercase;
+    text-align: center;
+
+    color: white;
+    background-color: #3d3d3d;
+
+    width: 100%;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.contenedor_btns_metodo_pago {
+    display: flex;
+    justify-content: space-around;
+    gap: 0.5em;
+}
+
+.btn_elegir_metodo_pago {
+    cursor: pointer;
+    border: none;
+    padding: 0.5em 1em;
+
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'VCR_OSD_Mono';
+    color: white;
+    filter: brightness(0.5);
+}
+
+.btn_elegir_efectivo {
+    background-color: #588157;
+}
+.btn_elegir_transferencia {
+    background-color: #c33115;
+}
+.btn_elegir_tarjeta {
+    background-color: #0960ae;
+}
+
+.btn_elegir_metodo_pago:hover {
+    transform: scale(1.01);
+    filter: brightness(1);
+}
+
+.contenedor_resumen_pago {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    color: white;
+    width: 100%;
+}
+
+.subtitulo {
+    font-size: 1rem;
+}
+
+.formato_dinero {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+    font-family: 'VCR_OSD_Mono';
+}
+
+div.formato_dinero {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#inpt_dinero_pagado {
+    display: inline;
+    width: 30%;
+    background-color: transparent;
+    color: white;
+}
+
+.contenedor_controles_realizar_venta {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+}
+
+.contenedor_cambio_cliente {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0.4;
+}
+
+.contenedor_cambio_cliente p:first-of-type{
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: 'VCR_OSD_Mono';
+}
+
+.control_realizar_venta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex:0.3;
+}
+
+.btn_accion_ventana_realizar_venta {
+    width: 70%;
+    height: 70%;
+    border:none;
+    cursor: pointer;
+}
+
+.btn_accion_ventana_realizar_venta:hover {
+    transform: scale(1.01);
+}
+
+.confirmar_venta {
+    background-color: rgb(0, 61, 0);
+}
+.confirmar_venta:hover {
+    background-color: rgb(0, 152, 0);
+}
+
+.btn_accion_ventana_realizar_venta img {
+    filter: invert();
+    width: 80%;
+}
+.cerrar_venta {
+    background-color: rgb(84, 1, 1);
+}
+.cerrar_venta:hover {
+    background-color: rgb(190, 0, 0);
+}
+
+/* =========================================
+    Contenedor para seleccionar cliente
+============================================ */
+
+.contenedor_seleccionar_cliente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    max-height: 120px;
+}
